@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temas de Programación No Lineal</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a; /* Fondo oscuro */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: url('https://images.unsplash.com/photo-1606377229917-cd44b94db2e2'); /* Fondo con patrón digital */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.5rem;
+            color: #00f9ff;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 50px;
+            text-shadow: 0 0 15px rgba(0, 249, 255, 0.8), 0 0 30px rgba(0, 249, 255, 0.7);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Animación de desvanecimiento */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .content-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 30px;
+            animation: slideUp 1.5s ease-in-out;
+        }
+
+        /* Animación de deslizamiento */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .link-box {
+            background-color: rgba(34, 34, 34, 0.85); /* Fondo oscuro con transparencia */
+            border-radius: 10px;
+            padding: 25px;
+            margin: 15px;
+            width: 280px;
+            box-shadow: 0 4px 20px rgba(0, 249, 255, 0.4); /* Sombra azul futurista */
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #00f9ff;
+        }
+
+        .link-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 25px rgba(0, 249, 255, 0.6); /* Efecto de luz al hacer hover */
+        }
+
+        .link-box h3 {
+            margin-bottom: 15px;
+            color: #00f9ff;
+            font-size: 1.3rem;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 0 0 8px rgba(0, 249, 255, 0.7);
+        }
+
+        .link-box a {
+            color: #00f9ff;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .link-box a:hover {
+            color: #2980b9;
+            text-shadow: 0 0 10px rgba(0, 249, 255, 1);
+        }
+
+        .link-box p {
+            font-size: 1rem;
+            text-align: justify;
+            color: #b0b0b0;
+        }
+
+        /* Estilo de los botones */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .button {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #f1c40f;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Temas de Programación No Lineal</h1>
+    
+    <div class="button-container">
+        <button class="button" onclick="window.location.href='index.html'">Inicio</button>
+        <button class="button" onclick="window.location.href='teoriadecolas.html'">Teoría de Colas</button>
+        <button class="button" onclick="window.location.href='programaciondinamica.html'">Programación Dinámica</button>
+    </div>
+
+    <div class="content-container">
+        <div class="link-box">
+            <h3>Programación Cuadrática</h3>  
+                <div class="button-container">
+                <button class="button" onclick="window.location.href='programacion_cuadratica.php'">Ir al programa</button>
+            </div>
+            <p>Este modelo se enfoca en la optimización de funciones cuadráticas, es decir, aquellas en las que la variable independiente aparece con un exponente de dos. Es útil en aplicaciones que requieren la minimización o maximización de funciones con restricciones.</p>
+        </div>
+        <div class="link-box">
+            <h3>Programación Convexa</h3>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='programacion_convexa.html'">Ir al programa</button>
+            </div>
+            <p>La programación convexa se utiliza para optimizar funciones convexas, las cuales tienen la propiedad de que cualquier línea recta que conecte dos puntos dentro de la función estará por encima de la curva. Es clave para diversos problemas de optimización.</p>
+        </div>
+        <div class="link-box">
+            <h3>Programación Geométrica</h3>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='programaciongeometrica.html'">Ir al programa</button>
+            </div>
+            <p>Este enfoque se ocupa de la optimización de funciones que son cóncavas o convexas en geometría, como aquellas que pueden representarse mediante una variedad geométrica. Es muy usado en la optimización de problemas de recursos con restricciones geométricas.</p>
+        </div>
+        <div class="link-box">
+            <h3>Programación No Convexa</h3>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='#'">Ir al programa</button>
+            </div>
+            <p>La programación no convexa se enfoca en optimizar funciones no convexas, que no presentan las propiedades deseables de las funciones convexas. Es más compleja debido a los posibles múltiples óptimos locales.</p>
+        </div>
+        <div class="link-box">
+            <h3>Programación Fraccional</h3>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='#'">Ir al programa</button>
+            </div>
+            <p>La programación fraccional aborda problemas de optimización donde la función objetivo o las restricciones involucran fracciones, con el numerador y el denominador representando funciones lineales o no lineales.</p>
+        </div>
+        <div class="link-box">
+            <h3>Programación Separable</h3>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='#'">Ir al programa</button>
+            </div>
+            <p>Este enfoque se usa para optimizar funciones que pueden descomponerse en una suma de términos que solo dependen de una variable. Es útil en la resolución de problemas donde las variables son independientes entre sí.</p>
+        </div>
+        <div class="link-box">
+            <h3>Optimización No Restringida con una Variable</h3>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='Optimización_No_Restringida_con_una_Variable.html'">Ir al programa</button>
+            </div>
+            <p>Este problema de optimización involucra la maximización o minimización de una función con una sola variable, sin restricciones. Es la forma más simple de optimización en la que se busca el valor óptimo de la función.</p>
+        </div>
+    </div>
+    <h2>Integrantes del Proyecto:<br>
+        - Jair Rodrigo Mamani Ticona 2022-119079<br>
+        - Jean Carlos Cusi Murillo 2022-119006
+    </h2>
+
+</body>
+</html>

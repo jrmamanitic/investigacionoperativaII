@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRAMACIÓN DEL NIVEL DE EMPLEADOS</title>
+    <style>
+        /* CSS para una interfaz moderna y oscura */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #2f3640; /* Fondo oscuro */
+            color: #ecf0f1;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #34495e;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 700px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            color: #ecf0f1;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .input-field:focus {
+            outline: none;
+            background-color: #34495e;
+            border: 1px solid #3498db;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            border: none;
+            background-color: #2980b9;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3498db;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #1abc9c;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            color: #2c3e50;
+            display: none;
+        }
+
+        .result h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .result p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #2980b9;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 8px;
+            display: block;
+            color: #ecf0f1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>PROGRAMACIÓN DEL
+            NIVEL DE EMPLEADOS</h1>
+        <div id="input-form">
+            <!-- Formulario para ingresar datos -->
+            <label for="x1">Nivel de empleados en Verano (x1):</label>
+            <input type="number" id="x1" class="input-field" value="247.5">
+            <label for="x2">Nivel de empleados en Otoño (x2):</label>
+            <input type="number" id="x2" class="input-field" value="245">
+            <label for="x3">Nivel de empleados en Invierno (x3):</label>
+            <input type="number" id="x3" class="input-field" value="247.5">
+            <label for="x4">Nivel de empleados en Primavera (x4):</label>
+            <input type="number" id="x4" class="input-field" value="255">
+            <button onclick="calculateCost()">Calcular Costo Total</button>
+        </div>
+        <div id="output" class="result">
+            <!-- Resultado -->
+            <h2>Resultado</h2>
+            <p id="result-text"></p>
+        </div>
+    </div>
+
+    <script>
+        function calculateCost() {
+            // Cálculos de programación dinámica
+            const x1 = parseFloat(document.getElementById('x1').value);
+            const x2 = parseFloat(document.getElementById('x2').value);
+            const x3 = parseFloat(document.getElementById('x3').value);
+            const x4 = parseFloat(document.getElementById('x4').value);
+
+            if (isNaN(x1) || isNaN(x2) || isNaN(x3) || isNaN(x4)) {
+                document.getElementById('result-text').innerText = "Por favor, ingrese valores válidos para todos los niveles.";
+                return;
+            }
+
+            // Costos por cambio de nivel y contratación/despido
+            const r1 = 220, r2 = 240, r3 = 200, r4 = 255;
+            const cost1 = 200 * Math.pow(x1 - 255, 2) + 2000 * Math.abs(x1 - r1);
+            const cost2 = 200 * Math.pow(x2 - x1, 2) + 2000 * Math.abs(x2 - r2);
+            const cost3 = 200 * Math.pow(x3 - x2, 2) + 2000 * Math.abs(x3 - r3);
+            const cost4 = 200 * Math.pow(x4 - x3, 2) + 2000 * Math.abs(x4 - r4);
+
+            const totalCost = cost1 + cost2 + cost3 + cost4;
+
+            // Mostrar resultado
+            document.getElementById('result-text').innerText = `Costo total estimado: $${totalCost.toFixed(2)}`;
+            document.getElementById('output').style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

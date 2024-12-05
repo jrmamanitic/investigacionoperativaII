@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temas II UNIDAD INVESTIGACIÓN OPERATIVA II</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a; /* Fondo oscuro */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: url('https://images.unsplash.com/photo-1606377229917-cd44b94db2e2'); /* Fondo con patrón digital */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.5rem;
+            color: #00f9ff;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 50px;
+            text-shadow: 0 0 15px rgba(0, 249, 255, 0.8), 0 0 30px rgba(0, 249, 255, 0.7);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Animación de desvanecimiento */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .content-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 30px;
+            animation: slideUp 1.5s ease-in-out;
+        }
+
+        /* Animación de deslizamiento */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .link-box {
+            background-color: rgba(34, 34, 34, 0.85); /* Fondo oscuro con transparencia */
+            border-radius: 10px;
+            padding: 25px;
+            margin: 15px;
+            width: 280px;
+            box-shadow: 0 4px 20px rgba(0, 249, 255, 0.4); /* Sombra azul futurista */
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #00f9ff;
+        }
+
+        .link-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 25px rgba(0, 249, 255, 0.6); /* Efecto de luz al hacer hover */
+        }
+
+        .link-box h3 {
+            margin-bottom: 15px;
+            color: #00f9ff;
+            font-size: 1.3rem;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 0 0 8px rgba(0, 249, 255, 0.7);
+        }
+
+        .link-box a {
+            color: #00f9ff;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .link-box a:hover {
+            color: #2980b9;
+            text-shadow: 0 0 10px rgb(18, 146, 148);
+        }
+
+        .link-box p {
+            font-size: 1rem;
+            text-align: justify;
+            color: #b0b0b0;
+        }
+
+        /* Estilo de los botones */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .button {
+            background-color: #179294;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 18px 36px;
+            margin: 0 15px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 10px rgba(0, 249, 255, 0.6);
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 249, 255, 1);
+        }
+
+        /* Estilo de la sección de integrantes */
+        h2 {
+            text-align: center;
+            color: #fff;
+            margin-top: 60px;
+            font-size: 1.5rem;
+            font-weight: normal;
+            animation: fadeIn 1.5s ease-in-out;
+            text-shadow: 0 0 8px rgba(0, 249, 255, 0.7);
+        }
+
+        .integrantes {
+            list-style: none;
+            padding: 0;
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            text-align: center;
+        }
+
+        .integrantes li {
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Temas II UNIDAD INVESTIGACIÓN OPERATIVA II</h1>
+
+    <div class="button-container">
+        <button class="button" onclick="window.location.href='teoriadecolas.html'">Teoría de Colas</button>
+        <button class="button" onclick="window.location.href='programaciondinamica.html'">Programación Dinámica</button>
+        <button class="button" onclick="window.location.href='programacionnolineal.html'">Programación No Lineal</button>
+    </div>
+
+    <div class="content-container">
+        <div class="link-box">
+            <h3>Tema 1: Teoría de Colas</h3>
+            <p> - Modelo de línea de espera con un servidor y con llegadas Poisson y tiempos de servicio exponenciales<br><br>
+                - Modelo de línea de espera de múltiples servidores con llegadas Poisson y tiempos de servicio exponenciales<br><br>
+                - Esquema de nacimiento y muerte en sistema de colas (teorema de Little)<br><br>
+                - Modelo de línea de espera con un servidor con llegadas Poisson y tiempos de servicio arbitrarios<br><br>
+                - Modelo de múltiples servidores con llegadas Poisson, tiempos de servicio arbitrarios y sin línea de espera<br><br>
+                - Modelos de línea de espera con fuentes finitas
+                </p>   
+        </div>
+        <div class="link-box">
+            <h3>Tema 2: Programación Dinámica</h3>
+            <p> - Problema de brigadas<br><br>
+                - Distribución de científicos entre grupos de investigación<br><br>
+                - Programación del nivel de empleados<br><br>
+                - Problema de la Wyndor Glass Company<br><br>
+                - Determinación de holguras por rechazos (probabilístico)<br><br>
+                - Ganadora en Las Vegas (probabilístico)<br><br>
+                - Modelo de la mochila/equipo de vuelo/carga de contenedor<br><br>
+                - Modelo de tamaño de la fuerza de trabajo<br><br>
+                - Modelo de reemplazo de equipo<br><br>
+                - Modelo de inversión
+                </p>
+        </div>
+        <div class="link-box">
+            <h3>Tema 3: Programación No Lineal</h3>
+            <p> - Programación Cuadrática<br><br>
+                - Programación Convexa<br><br>
+                - Programación Geométrica<br><br>
+                - Programación No Convexa<br><br>
+                - Programación Fraccional<br><br>
+                - Programación Separable<br><br>
+                - Optimización No Restringida con una Variable<br><br>
+                </p>
+        </div>
+    </div>
+
+    <h2>Integrantes del Proyecto:</h2>
+    <ul class="integrantes">
+        <li>- Jair Rodrigo Mamani Ticona 2022-119079</li>
+        <li>- Jean Carlos Cusi Murillo 2022-119006</li>
+    </ul>
+
+</body>
+</html>

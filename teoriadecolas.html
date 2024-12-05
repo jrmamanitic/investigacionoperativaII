@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría de Colas - Investigación Operativa II</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a; /* Fondo oscuro */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: url('https://images.unsplash.com/photo-1606377229917-cd44b94db2e2'); /* Fondo con patrón digital */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.5rem;
+            color: #00f9ff;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 50px;
+            text-shadow: 0 0 15px rgba(0, 249, 255, 0.8), 0 0 30px rgba(0, 249, 255, 0.7);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Animación de desvanecimiento */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .content-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 30px;
+            animation: slideUp 1.5s ease-in-out;
+        }
+
+        /* Animación de deslizamiento */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .link-box {
+            background-color: rgba(34, 34, 34, 0.85); /* Fondo oscuro con transparencia */
+            border-radius: 10px;
+            padding: 25px;
+            margin: 15px;
+            width: 280px;
+            box-shadow: 0 4px 20px rgba(0, 249, 255, 0.4); /* Sombra azul futurista */
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #00f9ff;
+        }
+
+        .link-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 25px rgba(0, 249, 255, 0.6); /* Efecto de luz al hacer hover */
+        }
+
+        .link-box h3 {
+            margin-bottom: 15px;
+            color: #00f9ff;
+            font-size: 1.3rem;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 0 0 8px rgba(0, 249, 255, 0.7);
+        }
+
+        .link-box a {
+            color: #00f9ff;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .link-box a:hover {
+            color: #2980b9;
+            text-shadow: 0 0 10px rgba(0, 249, 255, 1);
+        }
+
+        .link-box p {
+            font-size: 1rem;
+            text-align: justify;
+            color: #b0b0b0;
+        }
+
+        /* Estilo de los botones */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .button {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 18px 36px;
+            margin: 0 15px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color: #e67e22;
+            transform: scale(1.05);
+        }
+
+        /* Estilo de la sección de integrantes */
+        h2 {
+            text-align: center;
+            color: #fff;
+            margin-top: 60px;
+            font-size: 1.5rem;
+            font-weight: normal;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .integrantes {
+            list-style: none;
+            padding: 0;
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            margin-top: 20px;
+        }
+
+        .integrantes li {
+            margin-bottom: 10px;
+        }
+
+        .integrantes a {
+            color: #00f9ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Teoría de Colas - Investigación Operativa II</h1>
+
+    <div class="button-container">
+        <button class="button" onclick="window.location.href='index.html'">Inicio</button>
+        <button class="button" onclick="window.location.href='programaciondinamica.html'">Programación Dinámica</button>
+        <button class="button" onclick="window.location.href='programacionnolineal.html'">Programación No Lineal</button>
+    </div>
+
+    <div class="content-container">
+        <!-- Tema 1 -->
+        <div class="link-box">
+            <h3>Modelo de línea de espera con un servidor y con llegadas Poisson y tiempos de servicio exponenciales</h3>
+            <p>Este modelo describe un sistema de colas en el que las llegadas de clientes siguen un proceso de Poisson, y el tiempo de servicio tiene una distribución exponencial. En este sistema, un solo servidor gestiona las llegadas.</p>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='Modelo_de_línea_de_espera_con_un_servidor_y_con_llegadas_Poisson_y_tiempos_de_servicio_exponenciales.php'">Ingresar al Programa</button>
+            </div>
+        </div>
+        <!-- Tema 2 -->
+        <div class="link-box">
+            <h3>Modelo de línea de espera de múltiples servidores con llegadas Poisson y tiempos de servicio exponenciales</h3>
+            <p>En este modelo, hay varios servidores que atienden a los clientes que llegan siguiendo un proceso de Poisson. El tiempo de servicio es exponencial, y este modelo es más eficiente cuando hay una mayor cantidad de clientes.</p>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='Modelo_de_línea_de_espera_de_múltiples_servidores_con_llegadas_Poisson_y_tiempos_de_servicio_exponenciales.php'">Ingresar al Programa</button>
+            </div>
+        </div>
+        <!-- Tema 3 -->
+        <div class="link-box">
+            <h3>Esquema de nacimiento y muerte en sistema de colas (teorema de Little)</h3>
+            <p>Este esquema usa un proceso estocástico de nacimiento y muerte, y se basa en el teorema de Little, que establece una relación entre el número promedio de clientes en el sistema, el tiempo promedio que pasa un cliente en el sistema y la tasa de llegada.</p>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='Esquema_de_nacimiento_y_muerte_en_sistema_de_colas.php'">Ingresar al Programa</button>
+            </div>
+        </div>
+        <!-- Tema 4 -->
+        <div class="link-box">
+            <h3>Modelo de línea de espera con un servidor con llegadas Poisson y tiempos de servicio arbitrarios</h3>
+            <p>En este caso, las llegadas siguen un proceso de Poisson, pero los tiempos de servicio no siguen una distribución exponencial, sino que son arbitrarios, lo que añade más complejidad al análisis del sistema.</p>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='Modelo_de_línea_de_espera_con_un_servidor_con_llegadas_Poisson_y_tiempos_de_servicio_arbitrarios.php'">Ingresar al Programa</button>
+            </div>
+        </div>
+        <!-- Tema 5 -->
+        <div class="link-box">
+            <h3>Modelo de múltiples servidores con llegadas Poisson, tiempos de servicio arbitrarios y sin línea de espera</h3>
+            <p>Este modelo describe un sistema de múltiples servidores con llegadas de clientes según un proceso de Poisson. El tiempo de servicio es arbitrario y no se usa una línea de espera, lo que significa que los clientes deben ser atendidos de inmediato o se van.</p>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='Modelo_de_múltiples_servidores_con_llegadas_Poisson,_tiempos_de_servicio_arbitrarios_y_sin_línea_de_espera.php'">Ingresar al Programa</button>
+            </div>
+        </div>
+        <!-- Tema 6 -->
+        <div class="link-box">
+            <h3>Modelos de línea de espera con fuentes finitas</h3>
+            <p>Este modelo considera que la cantidad de clientes posibles en el sistema es finita. Los modelos de fuentes finitas son útiles cuando se tiene una cantidad limitada de recursos o clientes potenciales.</p>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='Modelos_de_línea_de_espera_con_fuentes_finitas.php'">Ingresar al Programa</button>
+            </div>
+        </div>
+    </div>
+
+
+    <ul class="integrantes">
+        <li>Integrantes del Proyecto:</li>
+        <li>- Jair Rodrigo Mamani Ticona 2022-119079</li>
+        <li>- Jean Carlos Cusi Murillo 2022-119006</li>
+    </ul>
+
+</body>
+</html>

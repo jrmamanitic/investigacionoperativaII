@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temas de Programación Dinámica</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a; /* Fondo oscuro */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: url('https://images.unsplash.com/photo-1606377229917-cd44b94db2e2'); /* Fondo con patrón digital */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.5rem;
+            color: #00f9ff;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 50px;
+            text-shadow: 0 0 15px rgba(0, 249, 255, 0.8), 0 0 30px rgba(0, 249, 255, 0.7);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Animación de desvanecimiento */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .content-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 30px;
+            animation: slideUp 1.5s ease-in-out;
+        }
+
+        /* Animación de deslizamiento */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .link-box {
+            background-color: rgba(34, 34, 34, 0.85); /* Fondo oscuro con transparencia */
+            border-radius: 10px;
+            padding: 25px;
+            margin: 15px;
+            width: 280px;
+            box-shadow: 0 4px 20px rgba(0, 249, 255, 0.4); /* Sombra azul futurista */
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #00f9ff;
+        }
+
+        .link-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 25px rgba(0, 249, 255, 0.6); /* Efecto de luz al hacer hover */
+        }
+
+        .link-box h3 {
+            margin-bottom: 15px;
+            color: #00f9ff;
+            font-size: 1.3rem;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 0 0 8px rgba(0, 249, 255, 0.7);
+        }
+
+        .link-box a {
+            color: #00f9ff;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .link-box a:hover {
+            color: #2980b9;
+            text-shadow: 0 0 10px rgba(0, 249, 255, 1);
+        }
+
+        .link-box p {
+            font-size: 1rem;
+            text-align: justify;
+            color: #b0b0b0;
+        }
+
+        /* Estilo de los botones */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .button {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 18px 36px;
+            margin: 0 15px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color: #e67e22;
+            transform: scale(1.05);
+        }
+
+        /* Estilo de la sección de integrantes */
+        h2 {
+            text-align: center;
+            color: #fff;
+            margin-top: 60px;
+            font-size: 1.5rem;
+            font-weight: normal;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Temas de Programación Dinámica</h1>
+    <div class="button-container">
+        <button class="button" onclick="window.location.href='index.html'">Inicio</button>
+        <button class="button" onclick="window.location.href='teoriadecolas.html'">Teoria de Colas</button>
+        <button class="button" onclick="window.location.href='programacionnolineal.html'">Programación No Lineal</button>
+    </div>
+    <div class="content-container">
+        <div class="link-box">
+            <h3>Problema de brigadas</h3>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='problema_de_brigadas.php'">Ir al programa</button>
+            </div>
+            <p>Este problema busca optimizar la asignación de trabajadores a diferentes brigadas con restricciones de tiempo y habilidades específicas para maximizar la eficiencia.</p>
+        </div>
+
+        <div class="link-box">
+            <h3>Distribución de científicos entre grupos de investigación</h3>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='Distribución_de_científicos_entre_grupos_de_investigación.php'">Ir al programa</button>
+            </div>
+            <p>Se enfoca en asignar científicos a grupos de investigación de forma óptima, maximizando la productividad y cumpliendo restricciones de recursos.</p>
+        </div>
+
+        <div class="link-box">
+            <h3>Programación del nivel de empleados</h3>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='Programación_del_nivel_de_empleados.html'">Ir al programa</button>
+            </div>
+            <p>Modelo que optimiza la cantidad de empleados necesarios en diferentes periodos, considerando costos laborales y demandas fluctuantes.</p>
+        </div>
+
+        <div class="link-box">
+            <h3>Problema de la Wyndor Glass Company</h3>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='#'">Ir al programa</button>
+            </div>
+            <p>Problema clásico de optimización que ilustra la distribución de recursos para maximizar los beneficios en una empresa de fabricación de productos de vidrio.</p>
+        </div>
+
+        <div class="link-box">
+            <h3>Determinación de holguras por rechazos (probabilístico)</h3>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='Determinación_de_holguras_por_rechazos_probabilístico.html'">Ir al programa</button>
+            </div>
+            <p>Modelo que analiza probabilísticamente la holgura necesaria para cubrir los rechazos en un sistema de producción.</p>
+        </div>
+
+        <div class="link-box">
+            <h3>Ganadora en Las Vegas (probabilístico)</h3>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='ganadora_en_las_vegas.php'">Ir al programa</button>
+            </div>
+            <p>Modelo probabilístico que busca maximizar las ganancias en escenarios de incertidumbre, como el juego en Las Vegas.</p>
+        </div>
+
+        <div class="link-box">
+            <h3>Modelo de la mochila/equipo de vuelo/carga de contenedor</h3>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='#'">Ir al programa</button>
+            </div>
+            <p>Modelo clásico que optimiza la selección de elementos a incluir en una mochila, vuelo o contenedor, respetando restricciones de peso y volumen.</p>
+        </div>
+
+        <div class="link-box">
+            <h3>Modelo de tamaño de la fuerza de trabajo</h3>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='Modelo_de_tamaño_de_la_fuerza_del_trabajo.php'">Ir al programa</button>
+            </div>
+            <p>Optimiza el tamaño de la fuerza laboral en función de las demandas de producción y los costos asociados.</p>
+        </div>
+
+        <div class="link-box">
+            <h3>Modelo de reemplazo de equipo</h3>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='Modelo_de_reemplazo_de_equipo.html'">Ir al programa</button>
+            </div>
+            <p>Determina el momento óptimo para reemplazar equipos con base en los costos de operación, mantenimiento y adquisición.</p>
+        </div>
+
+        <div class="link-box">
+            <h3>Modelo de inversión</h3>
+            <div class="button-container">
+                <button class="button" onclick="window.location.href='Modelo_de_inversion.php'">Ir al programa</button>
+            </div>
+            <p>Ayuda a decidir las mejores opciones de inversión considerando retornos, riesgos y restricciones financieras.</p>
+        </div>
+    </div>
+
+    <h2>Integrantes del Proyecto:<br>
+        - Jair Rodrigo Mamani Ticona 2022-119079<br>
+        - Jean Carlos Cusi Murillo 2022-119006
+    </h2>
+
+</body>
+</html>
